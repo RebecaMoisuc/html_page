@@ -1,0 +1,221 @@
+html {
+    font-size: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+     } 
+ *   { 
+  box-sizing: border-box; 
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+
+/*Sectiuni */
+
+.section-block {
+    height:calc(100vh - 8rem); padding:5rem;
+}
+  /* .section-block.not-fullscreen {height: auto;background-color: grey;} */
+.section-block.grey { background-color: grey; height: auto;}
+.section-block.lilla { background-color:lightslategrey;}
+.section-block h1, .section-block h2, .section-block.lilla, .section-block.grey { color: #fff;}
+  .section-block h1, .section-block h2 {
+    display:block; margin-bottom:2.5rem; text-align:center; font-size:4.8rem; font-weight:600; margin-bottom:5rem;
+  }
+ 
+
+
+@media (max-width:767px), (max-width:812px) and (orientation:landscape) {
+.section-block {
+    height:auto; min-height:calc(100vh - 8rem); padding:0  2.5rem;
+      }
+      .section-block.not-fullscreen {min-height:none;
+    }
+    .section-block h2, .section-block h2 { 
+        font-size:2.8rem;
+    }
+}
+
+
+
+/* Navigatie */
+
+/* parinte */
+header { 
+   position: fixed; top: 0; left: 0; width: 100%; height: 5rem; display:flex; justify-items:center; text-align:right; margin-right: 5rem;
+   align-items:center; height:7rem; padding:0.25rem 0.5rem; background-color: paleturquoise; z-index: 2;
+    } 
+    header + * {margin-top: 6rem;  }
+/* copil */
+ .logo {
+    display: inline-block;
+    } 
+ /* nepot */
+  .logo > img {
+      width:6rem; height:6rem; border-radius:50%;
+    } 
+    
+  .navigatie {
+      display:inline-block; text-align:center;
+    }
+
+   .navigatie > a {
+       display: inline-block; margin-right:1rem; font-size: 1.6rem; text-decoration:none; color: #000; 
+    }
+
+   .navigatie > a:last-child {
+       margin-right:1; 
+    }
+
+   .navigatie > a:hover {
+       text-decoration: underline;
+    }
+
+
+@media (max-width:580px), (max-width:812px) and (orientation:landscape) {
+    header {padding:0.75rem 0.5rem;}
+    .navigatie > a {margin-bottom:0.5rem; }
+}
+ 
+/* Hero */
+
+.hero {
+    display:flex; align-items:center; position: relative; height:calc(100vh - 10rem); padding: 0 5rem 5vh; background-image:url("background.jpeg"); background-position:center; background-repeat: no-repeat; background-size:cover; color: #fff;
+}
+  .hero::before {
+      content:""; position: absolute; top:0; left: 0; width:100%; height: 100%; background-color: rgba(0, 0, 0, -0.5);
+    }
+  .hero  h1 {
+      display:block; text-align: left; position:relative; z-index:2; font-size:2.8rem; font-weight: 100; margin: bottom 5rem;
+    }
+  .hero  p {
+      position: relative; z-index:1; font-size: 1.5rem; line-height :1.3;
+    }
+
+
+@media (max-width:767px), (max-width:812px) and (orientation:landscape) {
+    .hero {display:block; height: auto; min-height: 100vh - 8rem; padding:10rem 2.5rem 7rem;
+    }
+    .hero h1 { 
+        font-size: 2.8rem;
+    }
+    .hero  p { 
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Pasiunile si priectele mele*/
+
+
+  .my-passions h1, .my-portofolio h1 {
+      margin-bottom: 7.5rem 
+    }
+  .my-passions-inner-container, .my-portofolio-inner-container {
+      color: white; 
+    }
+  .my-passions-inner-container h3, .my-portofolio-inner-container h3 {
+      font-size:2.3rem; text-align:center; margin-bottom:2.5rem;
+    }
+  .my-passions-inner-container p, .my-portofolio-inner-container p {
+      font-size:1.2rem; text-align:justify; 
+    }
+
+
+  
+ /* Pasiunile si priectele mele*/
+
+
+/* Recomandari */
+
+  .rec-section-box {height:21rem; display: flex; align-items: center; color: white;}
+    .rec-section-box > div, .rec-section-box > img {display: inline-block; vertical-align: top;} 
+    .rec-section-box > div {width:calc(100% - 18rem);}
+    .rec-section-box > img { width:15rem; height:15rem; margin-right: 2.5rem; border-radius: 50%;}
+    .rec-section-box h3 { display:block; margin-bottom:2.5rem; font-size:2.4rem;  }
+    .rec-section-box p {  font-size: 1.2rem;  text-align: justify; margin-bottom: 2.5rem; }
+      
+ 
+  @media (max-width:1023px), (max-width:812px) and (orientation:landscape) {
+    .rec-section-box {
+                       height:auto; display:block; text-align: center;
+                     }
+  }
+
+/* About me */
+
+
+  .about-me-inner-container {color:white;display:flex; justify-content: space-around; align-items: center;}
+  .about-me-inner-container > img {width:25rem; height:25rem; border-radius:50%;}
+  .about-me-inner-container h3 {font-size: 3rem; margin-bottom: 3rem;}
+  .about-me-inner-container p {font-size: 2rem;}
+
+
+
+  @media (max-width:767px) 
+  {
+    .about-me-inner-container {display:block;}
+    .about-me-inner-container > img {width:20rem; height:20rem; border-radius:50%; margin-bottom:5rem; margin-right:0;}
+  }
+
+  .footer{font-size:1.6rem;color: white;}
+   .footer h3 {display: block; margin-bottom: 4rem; font-size: 2.4rem; font-weight:600;}
+   .footer address {margin-bottom: 2rem;}
+   .footer a {display: block; margin-bottom:0.5rem;}
+
+
+
+.grid {
+       width:calc(100% + 5rem); margin: 0 -2.5rem;
+      }
+  .grid-box {
+             float:left; height:auto; margin: 0 2.5rem 8rem; margin-bottom: 8rem;
+            }
+
+  .box-full {
+             width:calc(100% - 5rem);
+            }
+  .box-half { 
+              width:calc(50% - 5rem);
+           }
+  .box-third { 
+               width:calc(33.33% - 5rem);
+             }
+  .box-quarter { 
+                width:calc(25% - 5rem)
+               }
+
+
+
+ @media (max-width:767px) 
+ {
+    .grid-box {
+               float: left; margin:0 2.5rem 4rem;
+              }
+    .box-third { 
+                width:calc(50% - 5rem);
+               } 
+    .box-half { 
+               width:calc(100% - 5rem);
+              }  
+    .box-quarter { 
+                   width:calc(33.33% - 5rem);
+                 }
+}
+
+@media (max-width:480px) 
+ {
+      .box-third { 
+                  width:calc(100% - 5rem);
+                 } 
+    .box-half { 
+               width:calc(100% - 10rem);
+              }  
+    .box-quarter { 
+                   width:calc(33.33% - 5rem);
+                 }
+ }
